@@ -45,6 +45,13 @@ function showSlide(index) {
     buttons[currentSlide].classList.add('active');
 }
 
+// auto slide functionality
+
+setInterval(() => {
+    const newSlide = (currentSlide + 1) % sliderItems.length; // let currentSl = 4, newSlide = (4 + 1) % 6 = 5, if 0 = (0+1)%6 = 1., if 6 = (6+1)%6 = 7%6 = 1.
+    showSlide(newSlide)
+}, 3000)
+
 showSlide(currentSlide); // calling the function to show the first slide
 
 
